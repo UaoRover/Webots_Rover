@@ -4,8 +4,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.2874489159426995 -0.9429579239251897 -0.16793890088381289 1.1093864901873753
-  position -8.032372823245495 4.692260821798106 3.0204294875848734
+  orientation -0.3894457811420714 -0.9119470632558552 -0.12916863926535319 1.1315922490686416
+  position -4.008462207574101 3.0537684874440214 -1.4035185325541313
 }
 TexturedBackground {
 }
@@ -40,6 +40,23 @@ Solid {
 DEF Rover Robot {
   translation -2.24 2.33 -2.22
   children [
+    Camera {
+      translation -0.39 0.11 -4.77598e-17
+      rotation 0 -1 0 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 0
+          }
+          geometry Box {
+            size 0.02 0.02 0.02
+          }
+        }
+      ]
+      width 1920
+      height 1080
+      far 2
+    }
     Solid {
       translation 0 0 0.33
       children [
@@ -102,7 +119,7 @@ DEF Rover Robot {
                 ]
                 endPoint Solid {
                   translation -0.17041051839981802 -0.2275872205552426 0.05160000000000002
-                  rotation 0.9990323316930705 -0.031099893450258074 -0.031099788733837553 1.5717678305469123
+                  rotation 0.9990323316930704 -0.03109989345025807 -0.031099788733837536 1.5717678305469123
                   children [
                     DEF wheel Shape {
                       appearance GenericTireAppearance {
@@ -350,7 +367,7 @@ DEF Rover Robot {
                 ]
                 endPoint Solid {
                   translation -0.170411 -0.22758699999999998 -0.0484
-                  rotation 0.9990323316930704 -0.031099893450257904 -0.031099788733837033 1.5717678305469123
+                  rotation 0.9990323316930705 -0.031099893450257907 -0.03109978873383703 1.5717678305469123
                   children [
                     DEF wheel Shape {
                       appearance GenericTireAppearance {

@@ -17,8 +17,15 @@ timestep = int(robot.getBasicTimeStep())
 #  ds.enable(timestep)
 keyboard.enable(timestep)
 
+camera = robot.getDevice("camera");
+camera.enable(timestep);
+
+
 wheels=[]
-wheelsNames=['left_boggie_directional','left_rocker_directional','der_rocker_directional','der_boggie_directional','wheel_boggie_left','middle_wheel_left','wheel_rocker_left','wheel_boggie_der','middle_wheel_der','wheel_rocker_der']
+wheelsNames=['left_boggie_directional','left_rocker_directional',
+'der_rocker_directional','der_boggie_directional','wheel_boggie_left',
+'middle_wheel_left','wheel_rocker_left','wheel_boggie_der',
+'middle_wheel_der','wheel_rocker_der']
 
 for i in range(10):
     wheels.append(robot.getDevice(wheelsNames[i]))
