@@ -17,8 +17,10 @@ timestep = int(robot.getBasicTimeStep())
 #  ds.enable(timestep)
 keyboard.enable(timestep)
 
-camera = robot.getDevice("camera");
-camera.enable(timestep);
+
+depth=robot.getDevice('depth')
+depth.enable(timestep)
+
 
 
 wheels=[]
